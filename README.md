@@ -6,11 +6,12 @@
 |------|----|-------|
 |name|string|null: false, index|
 |email|string|null: false|
-|pass word|string|null: false|
+|password|string|null: false|
 
 ### Association
-- has_many :members
+- has_many :groups, through: members
 - has_many :messages
+- has_many :members
 
 
 ## groupsテーブル
@@ -20,8 +21,9 @@
 |name|string|null: false|
 
 ### Association
-- has_many :members
+- has_many :users, throught: members
 - has_many :messages
+- has_many :members
 
 
 ## membersテーブル
