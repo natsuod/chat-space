@@ -1,0 +1,37 @@
+.top
+  .top__makeGroup
+    チャットグループが作成されました。
+
+.side
+  .side__head
+    %h2.head__userName
+      Sample user
+    =link_to "/messages" do
+      %i.fa.fa-edit(style="font-size: 20px; color: #fff;" class='head__icon--first')
+    =link_to "/messages" do
+      %i.fa.fa-cog(style="font-size: 20px; color: #fff;" class='head__icon')
+  .side_sidebar
+    =render partial: "groups"
+
+.contents-head
+  .contents-head__group
+    .group__groupName
+      sampleグループ
+    =link_to 'Edit', "/messages", :class => "group__edit"
+  .contents-head__members
+    Members: Natsumi
+
+.main-contents
+  .main-contents__chats
+    =render partial: "messages"
+
+  %form.inputForm
+    .inputForm__text
+      %textarea(name="text" placeholder="type a message" class="text__holder")
+      %label
+        %span(class="upload-icon" title="ファイルを選択")
+          %i.fa.fa-picture-o
+        %input(type="file" name="datafile" id="filesend")
+    .inputForm__button
+      %input(id="submit_button" type="submit" value="SEND")
+
