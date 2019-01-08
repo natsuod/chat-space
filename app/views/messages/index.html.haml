@@ -7,9 +7,9 @@
     %h2.head__userName
       Sample user
     =link_to "/messages" do
-      %i.fa.fa-edit(style="font-size: 20px; color: #fff;" class='head__icon--first')
+      =fa_icon("edit", class: "head__icon--first", style: "font-size: 20px; color: white;")
     =link_to "/messages" do
-      %i.fa.fa-cog(style="font-size: 20px; color: #fff;" class='head__icon')
+      =fa_icon("cog", class: "head__icon", style: "font-size: 20px; color: #fff;")
   .side_sidebar
     =render partial: "groups"
 
