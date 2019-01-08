@@ -4,7 +4,7 @@
   float: right;
   background-color: #fff;
   border-bottom: 1px solid #eeeeee;
-    .contents-head__group {
+    &__group {
       height: 43px;
       padding: 28px 40px 0;
         .group__groupName {
@@ -24,7 +24,7 @@
           float: right;
         }
     }
-    .contents-head__members {
+    &__members {
       clear: both;
       margin-left: 40px;
       font-size: 12px;
