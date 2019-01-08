@@ -3,7 +3,7 @@
   width: calc(100% - 300px);
   float: right;
   position: relative;
-    .main-contents__chats {
+    &__chats {
       height: calc(100% - 90px);
       padding: 46px 40px 20px;
       overflow: scroll;
@@ -34,7 +34,7 @@
       width: 100%;
       bottom: 0;
       background-color: #aaaaaa;
-        .inputForm__text {
+        &__text {
           padding: 20px 0 20px 40px;
           margin-right: 15px;
           float: left;
@@ -75,3 +75,5 @@
 #filesend {
   display: none;
 }
+
+
