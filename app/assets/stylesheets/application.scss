@@ -13,7 +13,7 @@ html, body {
 .top {
   background-color: $buttons-color;
   height: 27px;
-    .top__makeGroup {
+    &__makeGroup {
       color: #fff;
       text-align: center;
       line-height: 27px;
