@@ -1,0 +1,21 @@
+@import "./reset";
+@import "./variable";
+@import "./font-awesome";
+
+@import "./header";
+@import "./sidebar";
+@import "./chat";
+
+html, body {
+  height: 100%;
+}
+
+.top {
+  background-color: $buttons-color;
+  height: 27px;
+    &__makeGroup {
+      color: #fff;
+      text-align: center;
+      line-height: 27px;
+    }
+}

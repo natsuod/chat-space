@@ -1,0 +1,33 @@
+.contents-head {
+  height: 100px;
+  width: calc(100% - 300px);
+  float: right;
+  background-color: #fff;
+  border-bottom: 1px solid #eeeeee;
+    &__group {
+      height: 43px;
+      padding: 28px 40px 0;
+        .group__groupName {
+          width: 300px;
+          font-size: 20px;
+          color: #333333;
+          margin-top: 7px;
+          float: left;
+        }
+        .group__edit {
+          padding: 0px 20px;
+          line-height: 40px;
+          text-decoration: none;
+          color: $buttons-color;
+          border: 2px solid $buttons-color;
+          display: inline-block;
+          float: right;
+        }
+    }
+    &__members {
+      clear: both;
+      margin-left: 40px;
+      font-size: 12px;
+      color: $dates-color;
+    }
+}

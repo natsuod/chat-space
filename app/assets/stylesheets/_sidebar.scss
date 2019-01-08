@@ -1,0 +1,53 @@
+.side {
+  height: 100%;
+  width: 300px;
+  float: left;
+    &__head {
+      height: 100px;
+      width: 100%;
+      background-color: #253141;
+      position: relative;
+        .head__userName {
+          color: $sidebar-color;
+          font-size: 16px;
+          font-weight: bold;
+          float: left;
+          padding: 35px 20px;
+        }
+        .head__icon {
+          padding-top: 40px;
+          position: absolute;
+          right: 20px;
+        }
+        .head__icon--first {
+          position: absolute;
+          padding-top: 40px;
+          right: 45px;
+        }
+    }
+    &_sidebar {
+      background-color: #2f3e51;
+      height: calc(100% - 125px);
+      width: 100%;
+        .sidebar__groups {
+          height: 70px;
+          width: 300px;
+            a {
+              color: $sidebar-color;
+              text-decoration: none;
+              display: block;
+                &:hover {
+                  background-color: #637c9e;
+                }
+                .items__name {
+                  padding: 20px 20px 5px;
+                  font-size: 15px;
+                }
+                .items__message {
+                  padding: 0 20px 20px;
+                  font-size: 11px;
+                }
+            }
+        }
+    }
+}
