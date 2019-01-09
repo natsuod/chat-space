@@ -1,21 +1,8 @@
 .sidebar__groups
-  =link_to "/" do
-    .groups__items
-      .items__name
-        sampleグループ
-      .items__message
-        まだメッセージはありません。
-.sidebar__groups
-  =link_to "/" do
-    .groups__items
-      .items__name
-        sampleグループ
-      .items__message
-        まだメッセージはありません。
-.sidebar__groups
-  =link_to "/" do
-    .groups__items
-      .items__name
-        sampleグループ
-      .items__message
-        まだメッセージはありません。
+  - current_user.groups.each do |group|
+    =link_to group_messages_path(group) do
+      .groups__items
+        .items__name
+          = group.name
+        .items__message
+          まだメッセージはありません。
