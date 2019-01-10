@@ -1,13 +1,4 @@
-.side
-  .side__head
-    %h2.head__userName
-      = current_user.name
-    =link_to "/groups/new" do
-      =fa_icon("edit", class: "head__icon--first", style: "font-size: 20px; color: white;")
-    =link_to edit_user_path(current_user) do
-      =fa_icon("cog", class: "head__icon", style: "font-size: 20px; color: #fff;")
-  .side_sidebar
-    =render partial: "groups"
+=render partial: "groups"
 
 .contents-head
   .contents-head__group
