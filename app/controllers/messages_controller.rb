@@ -8,6 +8,13 @@ end
 
 def create
   @message = @group.messages.new(message_params)
+  if @message.save
+    redirect_to group_message_path(@group), notice: 'メッセージが送信されました'
+  else
+    @messages = @group.messages.include(:user)
+    flash.now[:alert] = 'メッセージを入力してください'
+    render :index
+  end
 end
 
 def message_params
