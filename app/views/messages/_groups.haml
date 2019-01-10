@@ -1,8 +1,0 @@
-.sidebar__groups
-  - current_user.groups.each do |group|
-    =link_to group_messages_path(group) do
-      .groups__items
-        .items__name
-          = group.name
-        .items__message
-          まだメッセージはありません。
