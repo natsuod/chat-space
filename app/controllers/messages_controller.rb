@@ -7,7 +7,7 @@ def index
 end
 
 def create
-
+  @message = @group.messages.new(message_params)
 end
 
 def set_group
