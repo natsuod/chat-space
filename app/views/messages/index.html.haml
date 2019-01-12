@@ -10,15 +10,16 @@
 
 .main-contents
   .main-contents__chats
-    =render partial: "messages"
+    = render @messages
 
-  .inputForm
+  .inputform
     = form_for [@group, @message] do |f|
-      .inputForm__text
+      .inputform__text
         = f.text_field :content, class: 'text__holder', placeholder: 'type a message'
-        = f.label :image, class: 'upload-icon' do
-          = fa_icon 'picture-o'
-          = f.file_field :image, id: 'filesend'
-      .inputForm__button
+        .inputform__mask
+          = f.label :image, class: 'inputform__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+      .inputform__button
         = f.submit 'SEND', id: 'submit_button'
 
