@@ -53,7 +53,7 @@ end
 
 group :test do
   gem 'rails-controller-testing'
-  gem 'faker'
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -64,3 +64,4 @@ gem 'font-awesome-rails'
 gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'faker'
