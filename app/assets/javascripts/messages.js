@@ -36,7 +36,7 @@ $(function() {
       $('.main-contents__chats').append(html)
       $('.text__holder').val('')
       $('#submit_button').prop('disabled', false)
-      $("#submit_button")[0].reset();
+      $(".text__holder")[0].reset();
     })
     .fail(function(){
       alert('error');
