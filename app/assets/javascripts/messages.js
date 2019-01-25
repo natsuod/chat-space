@@ -31,5 +31,11 @@ $(function() {
       processData: false,
       contentType: false
     })
+    .done(function(data){
+      var html = buildHTML(data);
+      $('.main-contents__chats').append(html)
+      $('.text__holder').val('')
+      $('#submit_button').prop('disabled', false)
+    })
   })
 });
