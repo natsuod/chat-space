@@ -37,5 +37,8 @@ $(function() {
       $('.text__holder').val('')
       $('#submit_button').prop('disabled', false)
     })
+    .fail(function(){
+      alert('error');
+    })
   })
 });
