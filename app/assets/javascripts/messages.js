@@ -1,4 +1,24 @@
 $(function() {
+  function buildHTML(message){
+    var imagehtml = '';
+    if (message.image.url) {
+      imagehtml = `<img src="${ message.image.url }">`;
+    }
+
+    var html = `<div class="chats__chat">
+                  <div class="chat__name">
+                    ${ message.name }
+                  </div>
+                  <div class="chat__date">
+                    ${ message.time }
+                  </div>
+                  <div class="chat__message">
+                    ${ message.content }
+                    ${ imagehtml }
+                  </div>
+                </div>`
+    return html;
+  }
   $('#new_message').on('submit', function(e) {
     e.preventDefault();
     var formData = new FormData(this);
