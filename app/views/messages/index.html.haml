@@ -13,7 +13,7 @@
     = render @messages
 
   .inputform
-    = form_for [@group, @message] do |f|
+    = form_for [@group, @message], html: {id: 'new_message'} do |f|
       .inputform__text
         = f.text_field :content, class: 'text__holder', placeholder: 'type a message'
         .inputform__mask
