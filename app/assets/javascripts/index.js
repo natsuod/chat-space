@@ -17,6 +17,16 @@ function appendNoUser(user) {
   search_list.append(html);
 }
 
+function addUser(name, user_id) {
+  var html = `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
+                <input name='group[user_ids][]' type='hidden' value='${ user_id }'>
+                <p class='chat-group-user__name'>${ name }</p>
+                <a class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</a>
+              </div>`
+    $('#chat-group-users').append(html);
+}
+
+
   $("#user-search-field").on("keyup", function() {
     var input = $("#user-search-field").val();
 
