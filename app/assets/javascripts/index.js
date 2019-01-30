@@ -46,4 +46,10 @@ function appendNoUser(user) {
       })
     }
   });
+
+  $("#user-search-result").on("click", ".chat-group-user__btn--add", function() {
+    var name = $(this).data("user-name");
+    var user_id = $(this).data("user-id");
+    addUser(name, user_id);
+  })
 });
