@@ -41,5 +41,8 @@ $(function() {
     .fail(function(){
       alert('error');
     })
-  })
+  });
+
+  var interval = setInterval(function() {
+  } , 5000 );
 });
