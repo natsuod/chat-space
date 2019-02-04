@@ -44,5 +44,14 @@ $(function() {
   });
 
   var interval = setInterval(function() {
+    if (location.href.match(/\/groups\/\d+\/messages/)){
+      var message_id = $('.chat__chat').last().data('id');
+      $.ajax({
+        url: location.href,
+        type: "GET",
+        data: {id: message_id},
+        dataType: "json"
+      })
+    }
   } , 5000 );
 });
