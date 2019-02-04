@@ -52,6 +52,13 @@ $(function() {
         data: {id: message_id},
         dataType: "json"
       })
+      .done(function(data) {
+        data.forEach(function(message) {
+          var html = buildHTML(message);
+          $('.message-contents__chats').append(html);
+          $('.text__holder').val();
+        })
+      })
     }
   } , 5000 );
 });
