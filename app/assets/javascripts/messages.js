@@ -55,7 +55,7 @@ $(function() {
       .done(function(data) {
         data.forEach(function(message) {
           var html = buildHTML(message);
-          $('.message-contents__chats').append(html);
+          $('.main-contents__chats').append(html);
           $('.text__holder').val();
         })
       })
