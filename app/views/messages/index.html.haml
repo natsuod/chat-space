@@ -6,7 +6,10 @@
       = @group.name
     =link_to 'Edit', "edit", :class => "group__edit"
   .contents-head__members
-    Members: Natsumi
+    %li.member Members :
+    %li.member
+      - @group.users.each do |user|
+        = user.name
 
 .main-contents
   .main-contents__chats
